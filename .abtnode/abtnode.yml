@@ -1,0 +1,26 @@
+node:
+  name: 'ABT Node [gitpod]'
+  description: ABT Node on undefined
+  version: 1.0.16
+  sk: >-
+    0x1de897e271f7571ae5828721527e6b2929760c7522e7d5ac8105ce5e573235e6170b934331eb3296a2e659c93aaee2fafcfd9c503c1b227ce981ad7504b37658
+  pk: '0x170b934331eb3296a2e659c93aaee2fafcfd9c503c1b227ce981ad7504b37658'
+  did: zNKcsjn32pAEV2Pryxi7PCmmbBnnSGxq1NmZ
+  domain: ''
+  port: 8089
+  https: false
+  secret: '0x8d7a83a7bd6e6a687b4a0614554b4bed425370f1791635cc64339af36537f0bc'
+  owner:
+    pk: ''
+    did: ''
+  routing:
+    provider: nginx
+    adminPath: /admin/
+    headers:
+      X-Powered-By: '"ABT Node/1.0.16"'
+blocklet:
+  port: 8089
+  registry: 'https://blocklet.arcblock.io'
+  owner:
+    pk: ''
+    did: ''
