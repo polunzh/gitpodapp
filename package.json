@@ -1,0 +1,12 @@
+{
+  "name": "gitpod.com-blocklet-test",
+  "version": "1.0.8",
+  "main": "www",
+  "license": "MIT",
+  "blocklet": {
+    "title": "Blocklet Lin",
+    "capabilities": {
+      "dynamicPathPrefix": true
+    }
+  }
+}
