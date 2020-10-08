@@ -1,10 +1,10 @@
 image: gitpod/workspace-full
 tasks:
-  - command: python3 -m http.server 8080
-    name: Static Server
+  # - command: python3 -m http.server 8080
+  #   name: Static Server
   - command: ./init.sh
-  - openIn: left
-    command: echo LeftPanelTerminal
+  # - openIn: left
+  #   command: echo LeftPanelTerminal
 # ports:
 #   - port: 8000
 #     onOpen: open-preview
