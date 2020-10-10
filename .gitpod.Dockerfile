@@ -1,5 +1,3 @@
-FROM gitpod/workspace-full
-
 FROM ubuntu:18.04
 
 RUN apt-get upgrade -yy && \
@@ -18,6 +16,8 @@ RUN apt-get upgrade -yy && \
     apt-get install nginx -yy && \
     apt-get install libcap2-bin -yy && \
     setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
+
+FROM gitpod/workspace-full
 
 USER gitpod
 RUN npm install -g pm2 @abtnode/cli
