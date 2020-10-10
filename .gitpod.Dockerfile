@@ -1,7 +1,5 @@
 FROM gitpod/workspace-full
 
-FROM ubuntu:18.04
-
 ENV HOME=/home/arcblock
 ENV GROUP=arcblock
 ENV USER=arcblock
@@ -24,7 +22,7 @@ RUN apt-get upgrade -yy && \
 
 RUN groupadd arcblock && \
     useradd -g $GROUP $USER --home $HOME -s /bin/bash -p "$(openssl passwd -1 arcblock)" && \
-    npm install @abtnode/cli -g
+    npm install -g @abtnode/cli
 
 RUN chown -R $USER $HOME && \
     usermod -aG sudo $USER
