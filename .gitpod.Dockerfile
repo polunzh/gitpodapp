@@ -24,6 +24,6 @@ RUN apt-get upgrade -yy && \
 
 RUN groupadd arcblock && \
     useradd -g $GROUP $USER --home $HOME -s /bin/bash && \
-    chown -R $USER:$GROUP $HOME && \
+    chown -R $USER:$GROUP $HOME
 
 USER $USER
