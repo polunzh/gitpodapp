@@ -16,9 +16,5 @@ RUN apt-get upgrade -yy && \
     setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx && \
     apt-get install nodejs -yy
 
-
-
-USER gitpod
-
 RUN npm install -g @abtnode/cli --unsafe-perm && \
     npm install -g pm2
