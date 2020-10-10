@@ -18,6 +18,7 @@ RUN apt-get upgrade -yy && \
 
 FROM gitpod/workspace-full
 
+USER root
 RUN setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
 
 USER gitpod
