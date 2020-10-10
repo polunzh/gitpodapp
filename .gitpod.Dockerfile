@@ -5,7 +5,9 @@ ENV GROUP=arcblock
 ENV USER=arcblock
 
 USER root
-RUN apt-get install curl build-essential -yy && \
+RUN apt-get upgrade -yy && \
+    apt-get update && \
+    apt-get install curl build-essential -yy && \
     curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get install sudo -yy && \
     apt-get install vim -yy && \
