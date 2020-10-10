@@ -1,13 +1,7 @@
-# image: gitpod/workspace-full
-# image: node:alpine
 image:
   file: .gitpod.Dockerfile
 # tasks:
-  # - command: python3 -m http.server 8080
-  #   name: Static Server
-  # - command: ./init.sh
-  # - openIn: left
-  #   command: echo LeftPanelTerminal
+#   - command: ./start.sh
 # ports:
-#   - port: 8000
+#   - port: 8080
 #     onOpen: open-preview

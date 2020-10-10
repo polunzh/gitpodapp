@@ -4,7 +4,7 @@
   "main": "www",
   "license": "MIT",
   "blocklet": {
-    "title": "Blocklet Lin",
+    "title": "Blocklet Linchen",
     "capabilities": {
       "dynamicPathPrefix": true
     }
