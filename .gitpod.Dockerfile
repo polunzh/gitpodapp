@@ -6,7 +6,7 @@ ENV USER=arcblock
 
 USER root
 RUN apt-get upgrade -yy && \
-    apt-get update && \
+    apt-get update --fix-missing && \
     apt-get install curl build-essential -yy && \
     curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get install sudo -yy && \
