@@ -4,7 +4,7 @@ USER gitpod
 
 RUN brew install nginx
 RUN echo PATH=/home/linuxbrew/.linuxbrew/bin:$PATH >> ~/.bashrc
-RUN source
+RUN ls -l /home/linuxbrew/.linuxbrew/bin
 RUN which nginx
 
 USER root
