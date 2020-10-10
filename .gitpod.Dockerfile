@@ -1,9 +1,5 @@
 FROM ubuntu:18.04
 
-ENV HOME=/home/arcblock
-ENV GROUP=arcblock
-ENV USER=arcblock
-
 RUN apt-get upgrade -yy && \
     apt-get update && \
     apt-get install curl build-essential -yy && \
@@ -18,12 +14,11 @@ RUN apt-get upgrade -yy && \
     apt-get install libcap2-bin -yy && \
     apt-get install vim -yy && \
     setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx && \
-    apt-get install nodejs -yy && \
-    npm install -g @abtnode/cli --unsafe-perm && \
+    apt-get install nodejs -yy
+
+
+
+USER gitpod
+
+RUN npm install -g @abtnode/cli --unsafe-perm && \
     npm install -g pm2
-
-RUN groupadd arcblock && \
-    useradd -g $GROUP $USER --home $HOME -s /bin/bash && \
-    chown -R $USER:$GROUP $HOME
-
-USER $USER
