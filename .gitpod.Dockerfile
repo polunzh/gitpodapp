@@ -5,7 +5,7 @@ USER root
 RUN brew install nginx
 RUN which nginx
 RUN setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx \
-    getcap /usr/sbin/httpd
+    getcap /usr/sbin/nginx
     
 USER gitpod
 
