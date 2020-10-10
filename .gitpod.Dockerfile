@@ -2,6 +2,7 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
+RUN echo "Set disable_coredump false" >> /etc/sudo.conf
 RUN brew install nginx
 RUN echo PATH=/home/linuxbrew/.linuxbrew/bin:$PATH >> ~/.bashrc
 RUN which nginx
