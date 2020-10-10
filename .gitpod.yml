@@ -1,5 +1,7 @@
 image:
   file: .gitpod.Dockerfile
+tasks:
+  - command: sysctl -w "net.ipv4.ip_local_port_range=1"
 # tasks:
 #   - command: ./start.sh
 # ports:
