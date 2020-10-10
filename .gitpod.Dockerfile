@@ -14,10 +14,11 @@ RUN apt-get upgrade -yy && \
     apt-key fingerprint ABF5BD827BD9BF62 && \
     apt-get update -yy && \
     apt-get install nginx -yy && \
-    apt-get install libcap2-bin -yy && \
-    setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
+    apt-get install libcap2-bin -yy
 
 FROM gitpod/workspace-full
+
+RUN setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
 
 USER gitpod
 RUN npm install -g pm2 @abtnode/cli
