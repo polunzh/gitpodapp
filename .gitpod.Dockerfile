@@ -1,12 +1,18 @@
 FROM gitpod/workspace-full
 
+FROM ubuntu:18.04
+
 ENV HOME=/home/arcblock
 ENV GROUP=arcblock
 ENV USER=arcblock
 
-USER root
-RUN apt-get install curl build-essential -yy && \
+RUN apt-get upgrade -yy && \
+    apt-get update && \
+    apt-get install curl build-essential -yy && \
+    curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+    apt-get install nodejs -yy && \
     apt-get install sudo -yy && \
+    apt-get install vim -yy && \
     apt-get install -yy curl gnupg2 ca-certificates lsb-release && \
     echo "deb http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" \
     | sudo tee /etc/apt/sources.list.d/nginx.list && \
@@ -19,7 +25,7 @@ RUN apt-get install curl build-essential -yy && \
 
 RUN groupadd arcblock && \
     useradd -g $GROUP $USER --home $HOME -s /bin/bash -p "$(openssl passwd -1 arcblock)" && \
-    npm install -g @abtnode/cli
+    npm install -g pm2 lerna yarn
 
 RUN chown -R $USER $HOME && \
     usermod -aG sudo $USER
