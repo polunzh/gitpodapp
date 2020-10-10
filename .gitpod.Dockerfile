@@ -4,6 +4,7 @@ ENV HOME=/home/arcblock
 ENV GROUP=arcblock
 ENV USER=arcblock
 
+USER root
 RUN apt-get upgrade -yy && \
     apt-get update && \
     apt-get install curl build-essential -yy && \
