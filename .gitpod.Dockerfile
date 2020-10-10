@@ -2,8 +2,8 @@ FROM gitpod/workspace-full
 
 USER root
 
-RUN echo "net.ipv4.ip_unprivileged_port_start=1" >> /etc/sysctl.conf
 RUN sysctl -p
+RUN echo "net.ipv4.ip_unprivileged_port_start=1" >> /etc/sysctl.conf
 RUN cat /etc/sysctl.conf
 
 USER gitpod
