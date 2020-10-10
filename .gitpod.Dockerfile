@@ -25,7 +25,7 @@ RUN apt-get upgrade -yy && \
 
 RUN groupadd arcblock && \
     useradd -g $GROUP $USER --home $HOME -s /bin/bash -p "$(openssl passwd -1 arcblock)" && \
-    npm install -g pm2 lerna yarn
+    npm install -g pm2 @abtnode/cli
 
 RUN chown -R $USER $HOME && \
     usermod -aG sudo $USER
