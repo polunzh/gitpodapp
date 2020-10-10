@@ -5,8 +5,9 @@ ENV GROUP=arcblock
 ENV USER=arcblock
 
 USER root
-RUN apt-get clean && \
-    apt-get upgrade -yy && \
+RUN apt-get upgrade -yy && \
+    apt-get update && \
+    apt-get clean && \
     apt-get update
 
 RUN groupadd arcblock && \
