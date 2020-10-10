@@ -18,8 +18,8 @@ script
 - deploy
 
 abtnode
-- nginx /admin丢失
 - ABT_NODE_HTTP_PORT=8080 abtnode start 后 8080端口未启动. (报错)
+- nginx /admin丢失
 - nginx 反向代理失败 (307)
 - deploy error: not initialized
 - auto start
