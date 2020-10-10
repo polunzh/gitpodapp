@@ -1,7 +1,7 @@
 # image: gitpod/workspace-full
 # image: node:alpine
 image:
-  - file: .gitpod.Dockerfile
+  file: .gitpod.Dockerfile
 tasks:
   # - command: python3 -m http.server 8080
   #   name: Static Server
