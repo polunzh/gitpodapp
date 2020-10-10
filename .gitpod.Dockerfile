@@ -1,12 +1,9 @@
 FROM gitpod/workspace-full
 
-USER gitpod
+USER root
 
 RUN brew install nginx
 RUN which nginx
-
-USER root
-
 RUN setcap CAP_NET_BIND_SERVICE=+eip /user/sbin/nginx \
     getcap /usr/sbin/nginx
 
